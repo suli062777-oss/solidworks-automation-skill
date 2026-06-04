@@ -4,6 +4,32 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![SolidWorks](https://img.shields.io/badge/SolidWorks-2020--2025-red.svg)](https://www.solidworks.com/)
 
+## Enterprise Upgrade: Skill + MCP + CAD Domain Layer
+
+This repository now includes an enterprise-oriented v1 foundation:
+
+- Typed CAD specs: `PartSpec`, `AssemblySpec`, `InterfaceSpec`, `MateSpec`,
+  `DrawingSpec`, `ExportSpec`, and `ReviewSpec`.
+- A stateful service layer with stable `doc_id` handles and structured
+  `ToolResult` responses.
+- A Python MCP server so Codex/OpenClaw can call SolidWorks tools instead of
+  generating ad-hoc COM scripts.
+- A thin-slice benchmark workflow that runs part creation, assembly,
+  assembly inspection, drawing, export, and review through the service layer.
+
+See:
+
+- [`references/mcp-server.md`](./references/mcp-server.md)
+- [`references/capability-matrix.md`](./references/capability-matrix.md)
+- [`references/real-sw-validation.md`](./references/real-sw-validation.md)
+
+Install the MCP-enabled package:
+
+```bash
+python -m pip install -e ".[mcp]"
+solidworks-mcp-server
+```
+
 通过 Python COM 接口自动化控制 SolidWorks 的完整工具集，可被 Codex / Claude / OpenClaw（龙虾）等代理直接复用。支持零件建模、装配体、工程图、钣金、焊件、仿真等全流程自动化操作。
 
 [English](#english) | [中文](#中文)

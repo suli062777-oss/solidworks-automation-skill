@@ -6,6 +6,33 @@ metadata: { "openclaw": { "homepage": "https://github.com/wzyn20051216/solidwork
 
 # SolidWorks 自动化技能
 
+## Enterprise MCP First Workflow
+
+Prefer the MCP server and typed CAD specs for all new Codex/OpenClaw usage.
+Direct Python COM scripts are now a debugging fallback, not the primary
+automation path.
+
+1. Start the server with `solidworks-mcp-server` after installing
+   `python -m pip install -e ".[mcp]"`.
+2. Call `sw_preflight`, then `sw_connect`, then use `sw_part_create`,
+   `sw_assembly_create`, `sw_assembly_inspect`, `sw_drawing_create`,
+   `sw_export`, and `sw_review`.
+3. Treat `doc_id` as the document handle. Never expose COM objects to the
+   agent.
+4. Inspect every tool result's `ok`, `warnings`, `errors`, `artifacts`, and
+   `review` fields before continuing.
+5. Use semantic `InterfaceSpec` and `MateSpec` references before raw
+   `Face1@component` names.
+
+References:
+
+- `references/mcp-server.md`
+- `references/capability-matrix.md`
+- `references/real-sw-validation.md`
+- `scripts/sw_models.py`
+- `scripts/sw_service.py`
+- `scripts/sw_mcp_server.py`
+
 ## 快速开始
 
 ### 环境要求

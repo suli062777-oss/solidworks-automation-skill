@@ -34,6 +34,12 @@ REQUIRED_FILES = [
     "scripts/sw_export.py",
     "scripts/sw_review.py",
     "scripts/sw_session.py",
+    "scripts/sw_models.py",
+    "scripts/sw_selection.py",
+    "scripts/sw_service.py",
+    "scripts/sw_mcp_server.py",
+    "scripts/sw_workflows.py",
+    "scripts/sw_benchmark.py",
     "references/part-modeling.md",
     "references/assembly.md",
     "references/drawing.md",
@@ -41,6 +47,9 @@ REQUIRED_FILES = [
     "references/review.md",
     "references/api-lookup.md",
     "references/troubleshooting.md",
+    "references/capability-matrix.md",
+    "references/mcp-server.md",
+    "references/real-sw-validation.md",
 ]
 
 
