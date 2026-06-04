@@ -1,7 +1,7 @@
 {
   "name": "solidworks-automation-skill",
   "version": "1.2.0",
-  "description": "SolidWorks automation skill installer for Claude CLI and other AI tools",
+  "description": "Enterprise SolidWorks automation skill with Python MCP server, typed CAD specs, assembly inspection, benchmarks, and Codex/OpenClaw workflows",
   "main": "install.js",
   "bin": {
     "solidworks-automation-skill": "./install.js"
@@ -11,19 +11,30 @@
   },
   "keywords": [
     "solidworks",
+    "solidworks-api",
     "automation",
+    "cad-automation",
     "cad",
+    "mcp-server",
+    "python-com",
+    "codex",
     "openclaw",
     "lobster",
     "claude",
+    "ai-agent",
+    "assembly",
     "skill",
     "ai"
   ],
   "author": "wzyn20051216",
+  "contributors": [
+    "wzyn20051216",
+    "suli062777-oss"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wzyn20051216/solidworks-automation-skill.git"
+    "url": "https://github.com/suli062777-oss/solidworks-automation-skill.git"
   },
-  "homepage": "https://github.com/wzyn20051216/solidworks-automation-skill#readme"
+  "homepage": "https://github.com/suli062777-oss/solidworks-automation-skill#readme"
 }

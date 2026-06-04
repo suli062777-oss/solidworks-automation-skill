@@ -1,8 +1,31 @@
 # SolidWorks Automation Skill
 
+> Enterprise SolidWorks automation skill with Python MCP server, typed CAD specs,
+> assembly inspection, benchmark workflows, and Codex/OpenClaw workflows.
+>
+> This fork builds on
+> [`wzyn20051216/solidworks-automation-skill`](https://github.com/wzyn20051216/solidworks-automation-skill)
+> and moves it toward an enterprise-grade CAD agent foundation.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![SolidWorks](https://img.shields.io/badge/SolidWorks-2020--2025-red.svg)](https://www.solidworks.com/)
+
+## Current Status
+
+Current stage: enterprise foundation / full-flow prototype.
+
+Implemented in this fork:
+
+- MCP server v1 for structured SolidWorks tool calls.
+- Typed CAD specs for parts, assemblies, drawings, exports, and reviews.
+- Stateful service layer with `doc_id` handles and structured results.
+- Semantic selection resolver v1 for more stable CAD references.
+- Assembly inspection v1 and regression benchmark workflows.
+- Fake-COM tests for development without requiring SolidWorks on every test run.
+
+Production note: this foundation still needs real SolidWorks validation before
+being treated as production-ready CAD automation.
 
 ## Enterprise Upgrade: Skill + MCP + CAD Domain Layer
 
